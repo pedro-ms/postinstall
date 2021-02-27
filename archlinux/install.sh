@@ -4,8 +4,8 @@ DIR="$(dirname $0)"
 
 # VARIABLES --------------------------------------
 FILES=(
-  components/install
-  packages/install
+  # components/install
+  # packages/install
   third-party/install
 )
 # ------------------------------------------------
