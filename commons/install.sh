@@ -3,6 +3,7 @@ DIR="$(dirname $0)"
 . "$(dirname $DIR)"/functions.lib
 
 FILES=(
+  flatpak-apps
   aliases
 )
 
