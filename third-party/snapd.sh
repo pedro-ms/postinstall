@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 REPOSITORY="https://aur.archlinux.org/snapd.git" 
 DIRECTORY="~/.snapd"
 

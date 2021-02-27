@@ -5,9 +5,7 @@ DIR="$(dirname $0)"
 FILES=(
   snapd
   yay
+  asdf
 )
 
 run_file $DIR $FILES
-
-echo $0
-echo "$(dirname $0)"
