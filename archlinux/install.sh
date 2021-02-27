@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 DIR="$(dirname $0)"
-. $DIR/functions.lib
+. "$(dirname $DIR)"/functions.lib
 
 # VARIABLES --------------------------------------
 FILES=(
@@ -22,5 +22,4 @@ run_file $DIR $FILES
 sudo pacman -Syu --noconfirm
 sudo paccache -h
 sudo pacman -Rns $(pacman -Qdtq) --noconfirm
-flatpak update -y
 # ------------------------------------------------

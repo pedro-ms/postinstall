@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 REPOSITORY="https://aur.archlinux.org/yay.git" 
-DIRECTORY="~/.yay"
+DIRECTORY=~/.yay
 
 echo "Installing yay..."
 

@@ -3,10 +3,10 @@ DIR="$(dirname $0)"
 . "$(dirname $DIR)"/functions.lib
 
 FILES=(
-  xorg
-  kernel
-  bluetooth
-  network
+  flatpak-apps
+  snap-apps
+  aliases
+  asdf-plugins
 )
 
 run_file $DIR $FILES

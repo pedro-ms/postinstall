@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 DIR="$(dirname $0)"
-. "$(dirname $DIR)"/functions.lib
+PARENT="$(dirname $DIR)"
+. "$(dirname $PARENT)"/functions.lib
 
 FILES=(
   development
@@ -10,5 +11,3 @@ FILES=(
 )
 
 run_file $DIR $FILES
-
-echo $DIR

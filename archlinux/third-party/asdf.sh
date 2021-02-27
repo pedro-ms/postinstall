@@ -1,13 +1,15 @@
 #!/usr/bin/env bash
 REPOSITORY="https://github.com/asdf-vm/asdf.git"
-DIRECTORY="~/.asdf"
-BASHRC="~/.bashrc"
+DIRECTORY=~/.asdf
+BASHRC=~/.bashrc
 
 echo "Installing asdf..."
 
 if [ -d "$DIRECTORY" ]; then rm -Rf $DIRECTORY; fi
 
 git clone "$REPOSITORY" "$DIRECTORY"
+
+echo $DIRECTORY
 
 (cd "$DIRECTORY" && git checkout "$(git describe --abbrev=0 --tags)") 
 
