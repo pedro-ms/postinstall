@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 DIR="$(dirname $0)"
-. "$(dirname $DIR)"/functions.lib
+PARENT="$(dirname $DIR)"
+. "$(dirname $PARENT)"/functions.lib
 
 echo "Installing terminal utilities packages..."
 

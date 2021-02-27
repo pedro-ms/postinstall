@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 DIR="$(dirname $0)"
-. $DIR/functions.lib
+. "$(dirname $DIR)"/functions.lib
 
 # VARIABLES --------------------------------------
 FILES=(
-  # components/install
-  # packages/install
+  components/install
+  packages/install
   third-party/install
 )
 # ------------------------------------------------
