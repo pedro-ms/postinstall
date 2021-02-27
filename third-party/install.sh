@@ -4,6 +4,7 @@ DIR="$(dirname $0)"
 
 FILES=(
   snapd
+  yay
 )
 
 run_file $DIR $FILES
