@@ -6,6 +6,7 @@ DIR="$(dirname $0)"
 FILES=(
   components/install
   packages/install
+  third-party/install
 )
 # ------------------------------------------------
 
