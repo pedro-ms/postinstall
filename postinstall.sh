@@ -1,6 +1,13 @@
 #!/usr/bin/env bash
 # VARIABLES --------------------------------------
 PACKAGES=(
+  bluez
+  bluez-utils
+  blueberry
+  xorg
+  kernel
+  bluetooth
+  network
   base-devel
   jre-openjdk
   jdk-openjdk
@@ -68,5 +75,5 @@ echo "Finish flatpak apps install."
 sudo pacman -Syu --noconfirm
 sudo paccache -h
 sudo pacman -Rns $(pacman -Qdtq) --noconfirm
-flatpak update
+flatpak update -y
 # ------------------------------------------------
