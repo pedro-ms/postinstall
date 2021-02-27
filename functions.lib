@@ -1,0 +1,25 @@
+
+# Function to install pacman packages.
+# PARAM $1: List of package names to install.
+install_packages()
+{
+  PACKAGES=$1
+  for PACKAGE in "${PACKAGES[@]}"; do
+    echo "Installing ${PACKAGE}..."
+    sudo pacman -S "$PACKAGE" --noconfirm --needed
+  done
+}
+
+# Function to run scripts.
+# PARAM $1: Directory where the scripts are.
+# PARAM $2: List of script names to run.
+run_file()
+{
+  DIR=$1
+  FILES=$2
+  for FILE in "${FILES[@]}"; do
+    echo "Running ${FILE}..."
+    sudo chmod +x $DIR/$FILE.sh
+    ./$DIR/$FILE.sh
+  done
+}

@@ -1,21 +1,14 @@
 #!/usr/bin/env bash
+DIR="$(dirname $0)"
+. "$(dirname $DIR)"/functions.lib
 
-# DEV --------------------------------------------
-sudo chmod +x packages/development.sh
-./packages/development.sh
-# ------------------------------------------------
+FILES=(
+  development
+  tools
+  utilities
+  terminal-utilities
+)
 
-# TOOLS ------------------------------------------
-sudo chmod +x packages/tools.sh
-./packages/tools.sh
-# ------------------------------------------------
+run_file $DIR $FILES
 
-# UTILITIES --------------------------------------
-sudo chmod +x packages/utilities.sh
-./packages/utilities.sh
-# ------------------------------------------------
-
-# TERMINAL ---------------------------------------
-sudo chmod +x packages/terminal-utilities.sh
-./packages/terminal-utilities.sh
-# ------------------------------------------------
+echo $DIR

@@ -1,22 +1,12 @@
 #!/usr/bin/env bash
+DIR="$(dirname $0)"
+. "$(dirname $DIR)"/functions.lib
 
-# XORG -------------------------------------------
-sudo chmod +x components/xorg.sh
-./components/xorg.sh
-# ------------------------------------------------
+FILES=(
+  xorg
+  kernel
+  bluetooth
+  network
+)
 
-# KERNEL -----------------------------------------
-sudo chmod +x components/kernel.sh
-./components/kernel.sh
-# ------------------------------------------------
-
-# BLUEETOOTH -------------------------------------
-sudo chmod +x components/bluetooth.sh
-./components/bluetooth.sh
-# ------------------------------------------------
-
-# NETWORK ----------------------------------------
-sudo chmod +x components/network.sh
-./components/network.sh
-# ------------------------------------------------
-
+run_file $DIR $FILES
