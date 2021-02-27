@@ -4,7 +4,9 @@ DIR="$(dirname $0)"
 
 FILES=(
   flatpak-apps
+  snap-apps
   aliases
+  asdf-plugins
 )
 
 run_file $DIR $FILES

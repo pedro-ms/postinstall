@@ -22,5 +22,4 @@ run_file $DIR $FILES
 sudo pacman -Syu --noconfirm
 sudo paccache -h
 sudo pacman -Rns $(pacman -Qdtq) --noconfirm
-flatpak update -y
 # ------------------------------------------------

@@ -10,10 +10,12 @@ APPS=(
 
 echo "Installing flatpak apps..."
 
+# INSTALL FLATPACK APPS
 for APP in ${APPS[@]}; do
   sudo flatpak install flathub $APP -y
 done
 
+# UPDATE ALL FLATPACK APPS
 sudo flatpak update
 
 echo "Finish flatpak apps install."
