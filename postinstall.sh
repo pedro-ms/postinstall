@@ -1,17 +1,20 @@
 #!/usr/bin/env bash
+DIR="$(dirname $0)"
+. $DIR/functions.lib
+
+# VARIABLES --------------------------------------
+FILES=(
+  components/install
+  packages/install
+)
+# ------------------------------------------------
 
 # INIT -------------------------------------------
-sudo pacman -Syy -noconfirm
+sudo pacman -Syy --noconfirm
 # ------------------------------------------------
 
 # PROCESS ----------------------------------------
-
-sudo chmod +x components/install.sh
-./components/install.sh
-
-sudo chmod +x packages/install.sh
-./packages/install.sh
-
+run_file $DIR $FILES
 # ------------------------------------------------
 
 # FINISH -----------------------------------------

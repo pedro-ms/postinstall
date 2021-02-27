@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+DIR="$(dirname $0)"
+. "$(dirname $DIR)"/functions.lib
 
 echo "Installing terminal utilities packages..."
 
@@ -9,9 +11,6 @@ PACKAGES=(
   the_silver_searcher
 )
 
-for PACKAGE in "${PACKAGES[@]}"; do
-  echo "Installing ${PACKAGE}..."
-  sudo pacman -S "$PACKAGE" --noconfirm --needed
-done
+install_packages $PACKAGES
 
 echo "Finish installing terminal utilities packages."
