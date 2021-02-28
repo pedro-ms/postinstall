@@ -7,6 +7,7 @@ FILES=(
   snap-apps
   aliases
   asdf-plugins
+  ssh-key
 )
 
 run_file $DIR $FILES

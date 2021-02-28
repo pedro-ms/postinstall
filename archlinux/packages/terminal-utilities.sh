@@ -10,6 +10,7 @@ PACKAGES=(
   wget
   htop
   the_silver_searcher
+  xclip
 )
 
 install_packages $PACKAGES
